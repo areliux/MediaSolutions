@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <title>MediaSolutions - News Reader</title>
+    <!-- META TAGS -->
+    <meta name="viewport" content="width=device-width, user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="News Reader Media Solutions" />
+    <meta name="author" content="Innovación Tecnológica B&M" />
+    <!-- FAV ICONS -->
+    <!-- STYLES -->
+    <link href="Resources/jquery.mobile.icons.min.css" rel="stylesheet" />
+    <link href="Resources/jquery.mobile.media.solutions.css" rel="stylesheet" />
+    <!--<link href="Resources/jquery.mobile.css" rel="stylesheet" />-->
+    <link href="Resources/jquery.mobile.structure.min.css" rel="stylesheet" />
+    <link href="Resources/jquery.mobile.media.solutions.complement.css" rel="stylesheet" />
+    <!-- SCRIPTS -->
+    <script src="Scripts/Vendor/jquery.min.js"></script>
+    <script src="Scripts/Vendor/jquery.mobile.min.js"></script>
+    <script src="cordova-2.3.0.js"></script>
+<script type="text/javascript">
+            app.initialize();
+            //app.onDeviceReady();
+        </script>
+</head>
+<body>
+    <div data-role="page" id="news-page" data-dom-cache="false">
+        <div data-role="header" class="ui-ios-bar" data-position="fixed">
+            <a href="index.html" rel="external"
+                class="ui-ios-icon ui-btn ui-btn-inline ui-mini ui-btn-icon-left ui-icon-backbtn ui-btn-icon-notext ui-alt-icon ui-nodisc-icon " 
+                data-iconpos="notext">Back</a>
+            <h1>Nota completa</h1>
+            <a href="#" class="ui-ios-icon ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-share ui-btn-icon-notext ui-alt-icon ui-nodisc-icon" data-iconpos="notext">Share</a>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <div class="news-detail">
+                <div class="news-header">
+                    <img src="Resources/Images/Media/milenio.png" />
+                    <h2>Consectetur adipisicing elit sed do eiusmod asas asas asas</h2>
+                    
+                </div>
+                <div class="news-abstract">
+                    <img alt="internet" src="Resources/Images/MediaTypes/internet.png" class="abstract-media-type" />
+                        <img alt="internet" src="Resources/Images/NewsTypes/analisis.png" class="abstract-news-type" />
+                    <p class="abstract">Mauris a nisl aliquam, laoreet augue volutpat, cursus tortor. Morbi quis justo tincidunt, molestie nisi ut, condimentum lacus.</p>
+                    <p class="date">Febrero 9, 14:22</p>
+                </div>
+                <p class="news-text">Suspendisse ultricies quam ultricies ultrices ultrices. Curabitur ut nisl nec nibh posuere bibendum. Etiam sodales lacus lacus, non tempor felis hendrerit eu. Suspendisse et nunc leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin tellus libero, sollicitudin ac dolor non, pellentesque laoreet sapien. Suspendisse eu lorem consectetur, interdum odio ut, venenatis ipsum. Aenean sagittis nunc augue, nec lobortis massa pellentesque a. Integer a erat malesuada, dignissim sapien non, pellentesque ante. Donec imperdiet augue eget magna eleifend placerat. Mauris ut accumsan leo, at varius magna.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis massa fermentum nisi aliquet gravida. Praesent varius vestibulum nulla vel malesuada. Nulla volutpat euismod orci, eu porttitor purus aliquet at. Suspendisse tempus nunc eu turpis consequat faucibus et ac nulla. Duis sagittis nisl vel neque elementum viverra. Nam sollicitudin purus sed eros vestibulum fermentum. Etiam vitae felis varius, consequat nibh scelerisque, euismod massa. Donec mi nibh, scelerisque a sagittis sit amet, gravida nec ipsum. Mauris blandit ante vel venenatis tristique. Aenean non quam quam.
+                </p>
+            </div>
+
+        </div><!-- /content -->
+        <div data-role="footer" data-position="fixed">
+	        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="custom ui-nodisc-icon ui-icon-favorites"></a></li>
+                <li><a href="#" data-icon="custom ui-nodisc-icon ui-icon-read"></a></li>
+                <li><a href="#" data-icon="custom ui-nodisc-icon ui-icon-picture"></a></li>
+                <li><a href="#" data-icon="custom ui-nodisc-icon ui-icon-minus"></a></li>
+                <li><a href="#" data-icon="custom ui-nodisc-icon ui-icon-plus"></a></li>
+            </ul>
+        </div><!-- /navbar -->
+        </div>
+    </div><!-- /page -->
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <title>MediaSolutions - News Reader</title>
+    <!-- META TAGS -->
+    <meta name="viewport" content="width=device-width, user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="News Reader Media Solutions" />
+    <meta name="author" content="Innovación Tecnológica B&M" />
+    <!-- FAV ICONS -->
+    <!-- STYLES -->
+    <!--<link href="Resources/jquery.mobile.icons.min.css" rel="stylesheet" />-->
+    <!--<link href="Resources/jquery.mobile.media.solutions.css" rel="stylesheet" />-->
+    <link href="Resources/jquery.mobile.css" rel="stylesheet" />
+    <!--<link href="Resources/jquery.mobile.structure.min.css" rel="stylesheet" />-->
+    
+    <link href="Resources/jqm-datebox.css" rel="stylesheet" />
+    
+    <!-- SCRIPTS -->
+    <script src="Scripts/Vendor/jquery.min.js"></script>
+    <script src="Scripts/Vendor/jquery.mobile.min.js"></script>
+    <script src="Scripts/Vendor/jqm-datebox.core.js"></script>
+    <script src="Scripts/Vendor/jqm-datebox.mode.calbox.js"></script>
+    <script src="Scripts/Vendor/jqm-datebox.mode.flipbox.js"></script>
+    <script src="Scripts/Vendor/jquery.mobile.datebox.i18n.es-ES.utf8.js"></script>
+    <script src="cordova-2.3.0.js"></script>
+<script type="text/javascript">
+            app.initialize();
+            //app.onDeviceReady();
+        </script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="panel" id="main-panel" data-display="overlay" data-position="left" data-theme="a">
+            <ul data-role="listview" data-inset="false">
+                <li><a href="index.html" class="ui-btn ui-icon-main ui-btn-icon-left ui-alt-icon ui-ios-icon ui-nodisc-icon">Principal</a></li>
+                <li><a href="favorites.html" class="ui-btn ui-icon-favorites ui-btn-icon-left ui-ios-icon ui-nodisc-icon">Favoritos</a></li>
+                <li><a href="keywords.html" class="ui-btn ui-icon-keywords ui-btn-icon-left ui-ios-icon ui-nodisc-icon">Palabras Clave</a></li>
+                <li><a href="archive.html" class="ui-btn ui-icon-archive ui-btn-icon-left ui-ios-icon ui-nodisc-icon">Archivo</a></li>
+                <li><a href="notifications.html" class="ui-btn ui-icon-notifications ui-btn-icon-left ui-ios-icon ui-nodisc-icon">Notificaciones</a></li>
+                <li><a href="search.html" class="ui-btn ui-icon-newssearch ui-btn-icon-left ui-ios-icon ui-nodisc-icon">B&uacute;squeda</a></li>
+                <li data-role="list-divider"></li>
+                <li><a href="#" class="ui-btn ui-icon-power ui-btn-icon-left">Cerrar sesi&oacute;n</a></li>
+            </ul>
+        </div><!-- /panel -->
+        <div data-role="header" data-theme="a">
+            <a href="#main-panel" 
+                class="ui-ios-icon ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext ui-alt-icon ui-nodisc-icon " 
+                data-iconpos="notext">Options</a>
+            <h1>B&uacute;squeda</h1>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <p class="form-description">Selecciona los criterios para la b&uacute;squeda</p>
+            <form id="search-form">
+                    <label for="search-input" class="ui-hidden-accessible">B&uacute;squeda:</label>
+                    <input type="search" name="search-input" id="search-input" value="" placeholder="Palabras a buscar..." data-mini="true" />
+                
+                <label for="media-select" class="ui-hidden-accessible">Tipo de medio:</label>
+                <select multiple="multiple" data-native-menu="false" name="media-select" id="media-select" data-mini="true">
+                    <option value="">Tipo de medio:</option>
+                    <option value="1">Todos</option>
+                    <option value="1">Internet</option>
+                    <option value="2">Radio</option>
+                    <option value="3">Red social</option>
+                    <option value="4">Revista</option>
+                    <option value="5">Television</option>
+                </select>
+
+                <label for="note-select" class="ui-hidden-accessible">Tipo de nota:</label>
+                <select multiple="multiple" data-native-menu="false" name="note-select" id="note-select" data-mini="true">
+                    <option value="">Tipo de nota</option>
+                    <option value="0">Todos</option>
+                    <option value="1">An&aacute;lisis</option>
+                    <option value="2">Art&iacute;culo</option>
+                    <option value="3">Carta</option>
+                    <option value="4">Cartones</option>
+                    <option value="5">Columna</option>
+                    <option value="6">Comunicados</option>
+                    <option value="7">Debate</option>
+                    <option value="8">Desplegado</option>
+                    <option value="9">Edicto/Convocatoria</option>
+                    <option value="10">Entrevista</option>
+                    <option value="11">Esquela</option>
+                    <option value="12">Estadística</option>
+                    <option value="13">Nota com&uacute;n</option>
+                    <option value="14">Ocho columnas</option>
+                    <option value="15">Portada de secci&oacute;n</option>
+                    <option value="16">Primera plana</option>
+                    <option value="17">Publicidad</option>
+                    <option value="18">Publireportaje</option>
+                    <option value="19">Recuadro</option>
+                    <option value="20">Red social</option>
+                    <option value="21">Reportaje</option>
+                </select>
+
+                    <input name="mydate" id="mydate" type="date" 
+                        data-role="datebox" data-mini="true"
+                        data-options='{"mode": "flipbox",
+                            "useFocus": true, 
+                            "enablePopup": false, 
+                            "minDays":90, 
+                            "maxDays":0, 
+                            "useButton": false}'/>
+                    
+                
+
+                <div class="ui-field-contain">
+                    <label for="favorites-flip" class="inline-label">Favoritos:</label>
+                    <select name="favorites-flip" id="favorites-flip" data-role="slider" data-mini="true">
+                        <option value="off">No</option>
+                        <option value="on">S&iacute;</option>
+                    </select>
+                </div>
+
+                
+
+                <!--<div class="ui-input-btn ui-btn ui-btn-inline">
+                    Buscar
+                    <input type="button" data-enhanced="true" value="Buscar" />
+                </div>-->
+                <div align="right">
+                    <input type="button" data-inline="true" 
+                    value="Buscar" data-iconpos="right" data-icon="carat-r" />
+                </div>
+            </form>
+        </div><!-- /content -->
+
+        
+        
+    </div><!-- /page -->
+    
+</body>
+</html>

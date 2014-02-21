@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <title>MediaSolutions - News Reader</title>
+    <!-- META TAGS -->
+    <meta name="viewport" content="width=device-width, user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="News Reader Media Solutions" />
+    <meta name="author" content="Innovación Tecnológica B&M" />
+    <!-- FAV ICONS -->
+    <!-- STYLES -->
+    <link href="Resources/jquery.mobile.icons.min.css" rel="stylesheet" />
+    <link href="Resources/jquery.mobile.media.solutions.css" rel="stylesheet" />
+    <!--<link href="Resources/jquery.mobile.css" rel="stylesheet" />-->
+    <link href="Resources/jquery.mobile.structure.min.css" rel="stylesheet" />
+    <link href="Resources/jquery.mobile.media.solutions.complement.css" rel="stylesheet" />
+    <!-- SCRIPTS -->
+    <script src="Scripts/Vendor/jquery.min.js"></script>
+    <script src="Scripts/Vendor/jquery.mobile.min.js"></script>
+    <script src="Scripts/Modules/Models/news-page.js"></script>
+    <script src="cordova-2.3.0.js"></script>
+<script type="text/javascript">
+            app.initialize();
+            //app.onDeviceReady();
+        </script>
+    
+</head>
+<body>
+    <div data-role="page" id="news-page" data-dom-cache="false">
+        <div data-role="panel" id="main-panel" data-display="overlay" data-position="left" data-theme="a">
+            <ul data-role="listview" data-inset="false">
+                <li><a href="index.html" class="ui-btn ui-icon-news ui-btn-icon-left ui-alt-icon ui-ios-icon ui-nodisc-icon ui-btn-active">Noticias</a></li>
+                <li><a rel="external" href="favorites.html" class="ui-btn ui-icon-favorites ui-btn-icon-left ui-ios-icon ui-nodisc-icon">Favoritos</a></li>
+                <li><a rel="external" href="keywords.html" class="ui-btn ui-icon-keywords ui-btn-icon-left ui-ios-icon ui-nodisc-icon">Palabras Clave</a></li>
+                <li><a rel="external" href="archive.html" class="ui-btn ui-icon-archive ui-btn-icon-left ui-ios-icon ui-nodisc-icon">Archivo</a></li>
+                <li><a rel="external" href="notifications.html" class="ui-btn ui-icon-notifications ui-btn-icon-left ui-ios-icon ui-nodisc-icon">Notificaciones</a></li>
+                <li><a rel="external" href="search.html" class="ui-btn ui-icon-newssearch ui-btn-icon-left ui-ios-icon ui-nodisc-icon">B&uacute;squeda</a></li>
+                <li data-role="list-divider"></li>
+                <li><a href="#" class="ui-btn ui-btn-icon-left ui-ios-icon ui-nodisc-icon ui-icon-logoff">Cerrar sesi&oacute;n</a></li>
+            </ul>
+        </div><!-- /panel -->
+        <div data-role="header" class="ui-ios-bar" data-position="fixed" >
+            <a href="#main-panel" 
+                class="ui-ios-icon ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-menu ui-btn-icon-notext ui-alt-icon ui-nodisc-icon " 
+                data-iconpos="notext">Options</a>
+            <h1>Media Solutions</h1>
+            <a href="#" class="ui-ios-icon ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-reload ui-btn-icon-notext ui-alt-icon ui-nodisc-icon" data-iconpos="notext">Refresh</a>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="false" id="news-feed">
+                <li data-icon="false">
+                    <a href="#" class="news-itemlist">
+                        <img alt="Milenio" src="Resources/Images/Media/milenio.png" class="media-logo" />
+                        <img alt="internet" src="Resources/Images/MediaTypes/internet.png" class="media-type" />
+                        <img alt="internet" src="Resources/Images/NewsTypes/analisis.png" class="news-type" />
+                        <h2>Broken Bells</h2>
+                        <p class="news-abstract">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    </a>
+                </li>
+                
+            </ul>
+        </div><!-- /content -->
+    </div><!-- /page -->
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div id="carrusel">
+
+    </div>
+    <script src="Scripts/Vendor/jquery.min.js"></script>
+    <script src="cordova-2.3.0.js"></script>
+<script type="text/javascript">
+            app.initialize();
+            //app.onDeviceReady();
+        </script>
+    <script>
+        $(document).ready(function () {
+            var items = ['item1', 'item2', 'item3', 'item4'];
+            var cadena = '';
+            $.each(items, function (index, value) {
+                // Si es el elemento de cada grupo...
+                if ((index + 1) % 2 == 1) {
+                    cadena += '<div class="item"><ul class="thumbs">';
+                }
+                // Agrega cada elemento al cuerpo de la lista
+                cadena += '<li><img alt="' + items[index] + '" src=""/></li>';
+                // Si es el último elemento de cada grupo
+                if ((index + 1) % 2 == 0) {
+                    cadena += "</ul></div>";
+                }
+            });
+            // Si el número de elementos del arreglo es impar, se agrega el último cierre
+            if (items.length % 2 == 1) {
+                cadena += "</ul></div>";
+            }
+            $("#carrusel").append(cadena);
+            console.log(cadena);
+        });
+    </script>
+</body>
+</html>
